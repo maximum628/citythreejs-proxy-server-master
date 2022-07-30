@@ -63,7 +63,7 @@ app.use("*", express.static(assetFolder));
 
 
 
-const port = process.env.PORT || 5600;
+const port = process.env.PORT || 80;
 const server = app.listen(port, () => {
     console.log(`server up and running on port ${port}!`);
 });
