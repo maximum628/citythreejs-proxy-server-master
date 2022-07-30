@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 // const { createProxyMiddleware, fixRequestBody, responseInterceptor } = require('http-proxy-middleware');
-const proxy = require('express-http-proxy');
+// const proxy = require('express-http-proxy');
 
 require('dotenv').config();
 
@@ -28,7 +28,7 @@ const assetFolder = path.resolve(__dirname, './dist/');
 
 
 // config proxy
-const proxyConfig = proxy("/api",{target:"https://api.asian888.club"});
+// const proxyConfig = proxy("/api",{target:"https://api.asian888.club"});
 
 // const proxyMiddleware = createProxyMiddleware({
 //     // target: 'https://api.asian888.club',
@@ -56,7 +56,7 @@ const proxyConfig = proxy("/api",{target:"https://api.asian888.club"});
 //     },
 // });
 
-app.use( proxyConfig);
+// app.use( proxyConfig);
 app.use(express.static(assetFolder));
 app.use("*", express.static(assetFolder));
 // run server
